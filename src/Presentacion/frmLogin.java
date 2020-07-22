@@ -37,6 +37,7 @@ public class frmLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -48,9 +49,11 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtnombre = new javax.swing.JTextField();
-        txtcontrasena = new javax.swing.JTextField();
         lblacceder = new javax.swing.JLabel();
         lblCancelar = new javax.swing.JLabel();
+        txtcontrasena = new javax.swing.JPasswordField();
+
+        jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -110,12 +113,6 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/icons8_password_32px.png"))); // NOI18N
         jLabel7.setOpaque(true);
 
-        txtcontrasena.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtcontrasenaActionPerformed(evt);
-            }
-        });
-
         lblacceder.setBackground(new java.awt.Color(255, 0, 0));
         lblacceder.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblacceder.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,7 +133,7 @@ public class frmLogin extends javax.swing.JFrame {
         });
 
         lblCancelar.setBackground(new java.awt.Color(255, 0, 0));
-        lblCancelar.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        lblCancelar.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblCancelar.setForeground(new java.awt.Color(255, 255, 255));
         lblCancelar.setText("CANCELAR");
         lblCancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -167,18 +164,18 @@ public class frmLogin extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(lblacceder)
-                        .addGap(81, 81, 81)
+                        .addGap(60, 60, 60)
                         .addComponent(lblCancelar)
-                        .addGap(61, 61, 61))
+                        .addGap(122, 122, 122))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(85, 85, 85)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtnombre, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                            .addComponent(txtnombre, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                             .addComponent(txtcontrasena))
-                        .addGap(12, 12, 12))))
+                        .addGap(156, 156, 156))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,10 +188,13 @@ public class frmLogin extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtcontrasena))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(txtcontrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblacceder)
@@ -243,10 +243,6 @@ public class frmLogin extends javax.swing.JFrame {
  //Variables globales
       Connection cn = null;
           Pool_conexion metodospool = new Pool_conexion();
-
-    private void txtcontrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcontrasenaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcontrasenaActionPerformed
 
     private void lblaccederMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblaccederMouseEntered
        lblacceder.setBackground(Color.black);
@@ -404,9 +400,10 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblCancelar;
     private javax.swing.JLabel lblacceder;
-    private javax.swing.JTextField txtcontrasena;
+    private javax.swing.JPasswordField txtcontrasena;
     private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 }

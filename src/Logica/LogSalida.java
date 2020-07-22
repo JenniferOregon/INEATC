@@ -5,7 +5,7 @@
  */
 package Logica;
 
-import Datos.DatosAsesor;
+import Datos.DatosSalida;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,18 +18,17 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Jenni
  */
-public class LogAsesor {
+public class LogSalida {
    private Pool_conexion metodospool=new Pool_conexion();
     private Connection cn = null;
     private String sSql="";
     public Integer totalregistros;
     
-   
-    public DefaultTableModel mostrar(String buscar) throws SQLException{
+       public DefaultTableModel mostrar(String buscar) throws SQLException{
     DefaultTableModel modelo;
     
-    String [] titulos = {"RFC","Nombre","Apellidos","Domicilio","Telefono","Correo",};
-    String [] registro = new String [6];
+    String [] titulos = {"idSalida","Fecha","Hora","RFC","idusuario"};
+    String [] registro = new String [5];
     
     totalregistros=0;
     modelo= new DefaultTableModel(null,titulos){
@@ -37,16 +36,15 @@ public class LogAsesor {
     public boolean isCellEditable(int row, int column) {return false;}};
     try {
          cn = metodospool.dataSource.getConnection();
-         sSql="select * from ASESOR where nombre like'%"+buscar+"%' order by nombre";
+         sSql="select * from Salida where idSalida like'%"+buscar+"%' order by idSalida";
          Statement st = cn.createStatement();
          ResultSet rs=st.executeQuery(sSql);
          while(rs.next()){
-            registro [0]=rs.getString("RFC");
-            registro [1]=rs.getString("Nombre");
-            registro [2]=rs.getString("Apellido");
-            registro [3]=rs.getString("Domicilio");
-            registro [4]=rs.getString("Telefono");
-            registro [5]=rs.getString("Correo"); 
+            registro [0]=rs.getString("idSalida");
+            registro [1]=rs.getString("Fecha");
+            registro [2]=rs.getString("Hora");
+            registro [3]=rs.getString("RFC"); 
+            registro [4]=rs.getString("idusuario"); 
             totalregistros=totalregistros+1;
             modelo.addRow(registro);
            
@@ -55,7 +53,7 @@ public class LogAsesor {
          st.close();
          return modelo;
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, "Su error al mostrar Asesor: "+e);
+            JOptionPane.showConfirmDialog(null, "Su error al mostrar Salida: "+e);
             return null;
         }finally{
         try {
@@ -68,21 +66,21 @@ public class LogAsesor {
 
         }
         }
-    }
-    
+       }
     //MEtodo para insertar
-        public boolean insertar(DatosAsesor dts){
+    
+    
+        public boolean insertar(DatosSalida dts){
         try {
-            cn=metodospool.dataSource.getConnection();
-            sSql="insert into Asesor(RFC,Nombre,Apellido,Domicilio,Telefono,Correo)"+
-                "values(?,?,?,?,?,?)";
+             cn=metodospool.dataSource.getConnection();
+            sSql="insert into Salida( idSalida,Fecha,Hora,RFC,idusuario)"+
+                "values(?,?,?,?,?)";
             PreparedStatement pst=cn.prepareStatement(sSql);
-            pst.setString(1,dts.getRFC());
-            pst.setString(2, dts.getNombre());
-            pst.setString(3, dts.getApellido());
-            pst.setString(4, dts.getDomicilio());
-            pst.setString(5, dts.getTelefono());
-            pst.setString(6, dts.getCorreo());
+             pst.setInt(1, dts.getIdSalida());
+             pst.setString(2, dts.getFecha());
+             pst.setString(3,dts.getHora());
+             pst.setString(4,dts.getRFC());
+             pst.setInt(5,dts.getIdusuario());
             int n=pst.executeUpdate();
             if(n!=0){
                 return true;
@@ -104,18 +102,19 @@ public class LogAsesor {
         }
         }
     }
-           public boolean editar(DatosAsesor dts){
+        
+         public boolean editar(DatosSalida dts){
         try {
             cn = metodospool.dataSource.getConnection();
-            sSql="update Asesor set  nombre=?, apellido=?,domicilio=?, telefono=?,correo=? "+
-                   "where RFC=?";
+            sSql="update Salida set  Fecha=?,Hora=?,RFC=?,idusuario=? "+
+                   "where idSalida=?";
             PreparedStatement pst=cn.prepareStatement(sSql);
-            pst.setString(1, dts.getNombre());
-            pst.setString(2, dts.getApellido());
-            pst.setString(4, dts.getDomicilio());
-            pst.setString(3, dts.getTelefono());
-            pst.setString(5, dts.getCorreo());
-            pst.setString(6, dts.getRFC());
+           
+            pst.setString(1, dts.getFecha());
+            pst.setString(2, dts.getHora());
+            pst.setString(3, dts.getRFC());
+            pst.setInt(4, dts.getIdusuario());
+            pst.setInt(5, dts.getIdSalida());
            
             int n=pst.executeUpdate();
             pst.close();
@@ -139,12 +138,14 @@ public class LogAsesor {
         }
         }
     }
-               public boolean eliminar(DatosAsesor dts){
+         
+        
+      public boolean eliminar(DatosSalida dts){
         try {
             cn = metodospool.dataSource.getConnection();
-            sSql="delete from asesor where RFC=?";
+            sSql="delete from Salida where idSalida=?";
             PreparedStatement pst=cn.prepareStatement(sSql);
-            pst.setString(1,dts.getRFC());
+            pst.setInt(1,dts.getIdSalida());
             int n=pst.executeUpdate();
             pst.close();
             if(n!=0){
@@ -166,5 +167,7 @@ public class LogAsesor {
 
         }
         }
-    }  
+    }       
+        
+        
 }

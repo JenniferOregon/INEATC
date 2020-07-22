@@ -118,7 +118,6 @@ public class frm_Asesor extends javax.swing.JInternalFrame {
             }
         });
 
-        btnaccion.setActionCommand("");
         btnaccion.setBackground(new java.awt.Color(255, 0, 0));
         btnaccion.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         btnaccion.setForeground(new java.awt.Color(255, 255, 255));
@@ -350,6 +349,6 @@ public class frm_Asesor extends javax.swing.JInternalFrame {
     public static java.awt.Label label2;
     public static java.awt.Label label3;
     public static java.awt.Label label4;
-    private javax.swing.JLabel lblaccion;
+    public static javax.swing.JLabel lblaccion;
     // End of variables declaration//GEN-END:variables
 }

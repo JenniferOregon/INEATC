@@ -6,6 +6,7 @@
 package Presentacion;
 
 import java.awt.Dimension;
+import java.awt.Font;
 import javax.swing.JOptionPane;
 
 /**
@@ -34,6 +35,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jFrame1 = new javax.swing.JFrame();
         lbldependencia1 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
         jp_menu = new javax.swing.JPanel();
         lblusuarios = new javax.swing.JLabel();
         lbllibros = new javax.swing.JLabel();
@@ -41,6 +43,15 @@ public class FrmPrincipal extends javax.swing.JFrame {
         lbldependencia = new javax.swing.JLabel();
         lblentrada = new javax.swing.JLabel();
         lbldetalleentrada = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        lbldetallesalida = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        lblsalida = new javax.swing.JLabel();
         escritorio = new javax.swing.JDesktopPane();
         Lblbiendenido = new javax.swing.JLabel();
         LblNombre = new javax.swing.JLabel();
@@ -77,38 +88,62 @@ public class FrmPrincipal extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblusuariosMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblusuariosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblusuariosMouseExited(evt);
+            }
         });
 
         lbllibros.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbllibros.setForeground(new java.awt.Color(255, 255, 255));
-        lbllibros.setText("Libro");
+        lbllibros.setText("LIBRO");
         lbllibros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbllibrosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbllibrosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbllibrosMouseExited(evt);
             }
         });
 
         lblasesor.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblasesor.setForeground(new java.awt.Color(255, 255, 255));
-        lblasesor.setText("Asesor");
+        lblasesor.setText("ASESOR");
         lblasesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblasesorMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblasesorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblasesorMouseExited(evt);
             }
         });
 
         lbldependencia.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbldependencia.setForeground(new java.awt.Color(255, 255, 255));
-        lbldependencia.setText("Dependencia");
+        lbldependencia.setText("DEPENDENCIA");
         lbldependencia.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbldependenciaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbldependenciaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbldependenciaMouseExited(evt);
             }
         });
 
         lblentrada.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblentrada.setForeground(new java.awt.Color(255, 255, 255));
-        lblentrada.setText("Entrada");
+        lblentrada.setText("ENTRADA");
         lblentrada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblentradaMouseClicked(evt);
@@ -116,14 +151,53 @@ public class FrmPrincipal extends javax.swing.JFrame {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblentradaMouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblentradaMouseExited(evt);
+            }
         });
 
         lbldetalleentrada.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbldetalleentrada.setForeground(new java.awt.Color(255, 255, 255));
-        lbldetalleentrada.setText("Detalle Entrada");
+        lbldetalleentrada.setText("DETALLE ENTRADA");
         lbldetalleentrada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lbldetalleentradaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbldetalleentradaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbldetalleentradaMouseExited(evt);
+            }
+        });
+
+        lbldetallesalida.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lbldetallesalida.setForeground(new java.awt.Color(255, 255, 255));
+        lbldetallesalida.setText("DETALLE SALIDA");
+        lbldetallesalida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbldetallesalidaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbldetallesalidaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbldetallesalidaMouseExited(evt);
+            }
+        });
+
+        lblsalida.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblsalida.setForeground(new java.awt.Color(255, 255, 255));
+        lblsalida.setText("SAlIDA");
+        lblsalida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblsalidaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblsalidaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblsalidaMouseExited(evt);
             }
         });
 
@@ -131,43 +205,94 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jp_menu.setLayout(jp_menuLayout);
         jp_menuLayout.setHorizontalGroup(
             jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jp_menuLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbldetalleentrada)
-                    .addComponent(lblentrada)
-                    .addComponent(lbldependencia)
-                    .addComponent(lblasesor)
-                    .addComponent(lbllibros)
-                    .addComponent(lblusuarios))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGroup(jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_menuLayout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(lblentrada))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_menuLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(lblusuarios))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jp_menuLayout.createSequentialGroup()
+                .addGroup(jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addGroup(jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbldependencia)
+                            .addGroup(jp_menuLayout.createSequentialGroup()
+                                .addComponent(lblasesor)
+                                .addGap(32, 32, 32))))
+                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(lbldetalleentrada))
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(lbldetallesalida))
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(lbllibros))
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(lblsalida))
+                    .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jp_menuLayout.setVerticalGroup(
             jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_menuLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addContainerGap()
                 .addComponent(lblusuarios)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbllibros)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
                 .addComponent(lblasesor)
-                .addGap(18, 18, 18)
-                .addComponent(lbldependencia)
-                .addGap(12, 12, 12)
-                .addComponent(lblentrada)
-                .addGap(18, 18, 18)
+                .addGroup(jp_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(lbldependencia)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(lblentrada))
+                    .addGroup(jp_menuLayout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbldetalleentrada)
-                .addContainerGap(421, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(lbldetallesalida)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblsalida)
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         escritorio.setBackground(new java.awt.Color(51, 51, 51));
 
         Lblbiendenido.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         Lblbiendenido.setForeground(new java.awt.Color(255, 255, 255));
-        Lblbiendenido.setText("BIENBENIDO");
+        Lblbiendenido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Lblbiendenido.setText("BIENVENIDO");
 
-        LblNombre.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        LblNombre.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         LblNombre.setForeground(new java.awt.Color(255, 255, 255));
+        LblNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblNombre.setText("NOMBRE");
 
         escritorio.setLayer(Lblbiendenido, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -177,15 +302,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(escritorioLayout.createSequentialGroup()
-                .addGroup(escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(escritorioLayout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(Lblbiendenido))
-                    .addGroup(escritorioLayout.createSequentialGroup()
-                        .addGap(275, 275, 275)
-                        .addComponent(LblNombre)))
-                .addContainerGap(278, Short.MAX_VALUE))
+            .addComponent(Lblbiendenido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(LblNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +320,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jp_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jp_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(escritorio)
                 .addContainerGap())
@@ -225,6 +344,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
      frmTodoEntrada frmtodoentrada = new frmTodoEntrada();
      frmTodoDetalleEntrada frmtododetalleentrada= new frmTodoDetalleEntrada();
      frm_RegistroEntrada frmregistroentrada=new  frm_RegistroEntrada();
+     frm_RegistroSalida frmregistrosalida=new frm_RegistroSalida();
+     frmTodoSalida frmtodosalida=new frmTodoSalida();
+     frmTodoDetalleSalida frmtododetallesalida=new frmTodoDetalleSalida();
      //DEclarar variables publicas
     public int  idUsuario;
     public String NombreUsuario;
@@ -409,7 +531,177 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void lblentradaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblentradaMouseEntered
         // TODO add your handling code here:
+        Font fuenteactual=lblentrada.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lblentrada.setFont(nuevafuente);
     }//GEN-LAST:event_lblentradaMouseEntered
+
+    private void lblusuariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblusuariosMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lblusuarios.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lblusuarios.setFont(nuevafuente);
+        
+    }//GEN-LAST:event_lblusuariosMouseEntered
+
+    private void lblusuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblusuariosMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lblusuarios.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lblusuarios.setFont(nuevafuente);
+    }//GEN-LAST:event_lblusuariosMouseExited
+
+    private void lbllibrosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbllibrosMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lbllibros.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lbllibros.setFont(nuevafuente);
+    }//GEN-LAST:event_lbllibrosMouseEntered
+
+    private void lbllibrosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbllibrosMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lbllibros.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lbllibros.setFont(nuevafuente);
+    }//GEN-LAST:event_lbllibrosMouseExited
+
+    private void lblasesorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblasesorMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lblasesor.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lblasesor.setFont(nuevafuente);
+    }//GEN-LAST:event_lblasesorMouseEntered
+
+    private void lblasesorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblasesorMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lblasesor.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lblasesor.setFont(nuevafuente);
+    }//GEN-LAST:event_lblasesorMouseExited
+
+    private void lbldependenciaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldependenciaMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lbldependencia.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lbldependencia.setFont(nuevafuente);
+    }//GEN-LAST:event_lbldependenciaMouseEntered
+
+    private void lbldependenciaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldependenciaMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lbldependencia.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lbldependencia.setFont(nuevafuente);
+    }//GEN-LAST:event_lbldependenciaMouseExited
+
+    private void lblentradaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblentradaMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lblentrada.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lblentrada.setFont(nuevafuente);
+    }//GEN-LAST:event_lblentradaMouseExited
+
+    private void lblsalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblsalidaMouseClicked
+        // TODO add your handling code here:
+        try {
+        boolean mostrar=true;
+        String Nombre=frmtodosalida.getTitle();
+        for (int a=0;a<escritorio.getComponentCount();a++){     // verificar si es instancia de algun componente que ya este en el jdesktoppane
+        if( frmtodosalida.getClass().isInstance( escritorio.getComponent(a) )){
+        // JOptionPane.showMessageDialog(rootPane, "La ventana "+Nombre+" que interta abrir ya está abierta, cierre la ventana actual e intente nuevamente");
+        System.out.println("esta instancia, no se debe mostrar");
+        frmtodosalida.toFront();
+        escritorio.moveToFront(frmtodosalida);
+        mostrar=false;
+     }else{
+        System.out.println("no lo es, puede mostrarse");
+    }
+}
+        if(mostrar){
+        Dimension desktopSize = escritorio.getSize();
+        frmtodosalida.setSize(escritorio.getSize());
+        escritorio.add(frmtodosalida);
+       
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)frmtodosalida.getUI()).setNorthPane(null);//Con esto quito el title
+        }
+         frmtodosalida.show();
+        } catch (Exception e) {
+          JOptionPane.showConfirmDialog(null,"Error: " + e);
+        }
+
+
+    }//GEN-LAST:event_lblsalidaMouseClicked
+
+    private void lbldetalleentradaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldetalleentradaMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lbldetalleentrada.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lbldetalleentrada.setFont(nuevafuente);
+    }//GEN-LAST:event_lbldetalleentradaMouseEntered
+
+    private void lbldetalleentradaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldetalleentradaMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lbldetalleentrada.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lbldetalleentrada.setFont(nuevafuente);
+    }//GEN-LAST:event_lbldetalleentradaMouseExited
+
+    private void lbldetallesalidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldetallesalidaMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lbldetallesalida.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lbldetallesalida.setFont(nuevafuente);
+    }//GEN-LAST:event_lbldetallesalidaMouseEntered
+
+    private void lbldetallesalidaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldetallesalidaMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lbldetallesalida.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lbldetallesalida.setFont(nuevafuente);
+    }//GEN-LAST:event_lbldetallesalidaMouseExited
+
+    private void lblsalidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblsalidaMouseEntered
+        // TODO add your handling code here:
+        Font fuenteactual=lblsalida.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()+5F);
+        lblsalida.setFont(nuevafuente);
+    }//GEN-LAST:event_lblsalidaMouseEntered
+
+    private void lblsalidaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblsalidaMouseExited
+        // TODO add your handling code here:
+        Font fuenteactual=lblsalida.getFont();
+        Font nuevafuente=fuenteactual.deriveFont(fuenteactual.getSize()-5F);
+        lblsalida.setFont(nuevafuente);
+    }//GEN-LAST:event_lblsalidaMouseExited
+
+    private void lbldetallesalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbldetallesalidaMouseClicked
+        // TODO add your handling code here:
+        try {
+        boolean mostrar=true;
+        String Nombre=frmtododetallesalida.getTitle();
+        for (int a=0;a<escritorio.getComponentCount();a++){     // verificar si es instancia de algun componente que ya este en el jdesktoppane
+        if( frmtododetallesalida.getClass().isInstance( escritorio.getComponent(a) )){
+        // JOptionPane.showMessageDialog(rootPane, "La ventana "+Nombre+" que interta abrir ya está abierta, cierre la ventana actual e intente nuevamente");
+        System.out.println("esta instancia, no se debe mostrar");
+        frmtododetallesalida.toFront();
+        escritorio.moveToFront(frmtododetallesalida);
+        mostrar=false;
+     }else{
+        System.out.println("no lo es, puede mostrarse");
+    }
+}
+        if(mostrar){
+        Dimension desktopSize = escritorio.getSize();
+        frmtododetallesalida.setSize(escritorio.getSize());
+        escritorio.add(frmtododetallesalida);
+       
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)frmtododetallesalida.getUI()).setNorthPane(null);//Con esto quito el title
+        }
+         frmtododetallesalida.show();
+        } catch (Exception e) {
+          JOptionPane.showConfirmDialog(null,"Error: " + e);
+        }
+
+    }//GEN-LAST:event_lbldetallesalidaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -451,13 +743,23 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel Lblbiendenido;
     public static javax.swing.JDesktopPane escritorio;
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JPanel jp_menu;
     private javax.swing.JLabel lblasesor;
     private javax.swing.JLabel lbldependencia;
     private javax.swing.JLabel lbldependencia1;
     private javax.swing.JLabel lbldetalleentrada;
+    private javax.swing.JLabel lbldetallesalida;
     private javax.swing.JLabel lblentrada;
     private javax.swing.JLabel lbllibros;
+    private javax.swing.JLabel lblsalida;
     private javax.swing.JLabel lblusuarios;
     // End of variables declaration//GEN-END:variables
 }
